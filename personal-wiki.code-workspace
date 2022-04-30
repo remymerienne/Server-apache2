@@ -1,0 +1,13 @@
+{
+  "folders": [
+    {
+      "name": "Personal-wiki",
+      "path": "./"
+    }
+  ],
+  "settings": {
+    "window.zoomLevel": 0,
+    "liveServer.settings.port": 5500,
+    "liveServer.settings.multiRootWorkspaceName": "Folio"
+  }
+}

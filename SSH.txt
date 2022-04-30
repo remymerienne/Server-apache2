@@ -1,0 +1,44 @@
+SSH - Secure Shell
+==================
+Protocole de communication sécurisé permettant l'accès à distance à notre serveur.
+
+*****************************
+
+Sécurisation :
+==============
+
+#.1 -a Modifier le port d'origine (22)
+--------------------------------------
+    - Se connecter en SU
+    - Editer le fichier de configuration de SSH :
+      $ vim /etc/ssh/sshd_config
+    - Modifier le port 
+
+#.1 -b Interdire la connection ROOT
+-----------------------------------
+    #PermitRootLogin no
+
+#.2 Configurer une clé SSH
+--------------------------
+    En local sur notre machine, générer une clé avec :
+      $ ssh-keygen -t rsa -b 4096 -C "addresse email"
+    - Valider la destination de sauvegarde
+    - Entrer une passphrase (à ne pas oublier)
+    (Deux clés (privé et publique) sont alors stockées dans le dossier .ssh de notre machine)
+    
+    - Se connecter en user
+    - Créer un repertoire .ssh à la racine utilisateur :
+      $ mkdir -m 700 .ssh (-m pour mode d'accès avec droits 700)
+    - Créer un fichier dans .ssh nommé authorized_keys :
+      $ touch .ssh/authorized_keys
+    - Coller dans ce fichier le code de la clé publique (id_rsa.pub)
+    - Modifier les droits du fichiers :
+      $ chmod 600 .ssh/authorized_keys
+    - Se déconnecter et se reconnecter pour vérifier le bon fonctionnement de la passphrase
+
+    Supprimer l'autentification par mot de passe :
+    - Se connecter en SU
+    - Editer le fichier de configuration de SSH :
+      $ vim /etc/ssh/sshd_config
+      #PasswordAuthentication no
+    
