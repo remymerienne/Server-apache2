@@ -1,0 +1,42 @@
+iptables - Firewall
+===================
+
+Installation :
+**************
+
+#.1 Désinstaller nftables
+-------------------------
+  - Se connecter en SU
+  $ apt-get remove --auto-remove nftables
+  $ apt-get purge nftables
+
+#.2 Installer iptables
+----------------------
+  $ apt-get update
+  $ apt-get install iptables
+
+#.3 Installer iptables-persistent
+---------------------------------
+  $ apt-get install iptables-persistent
+
+Configuration :
+***************
+
+#.4 Fichiers de configuration
+-----------------------------
+  $ /etc/iptables/rules.v4
+  $ /etc/iptables/rules.v6
+
+  $ /etc/init.d/firewall*
+  $ /etc/init.d/firewallipv*
+
+   iptables-save > /etc/iptables/rules.v4
+
+755
+iptables -D INPUT 2
+
+Commandes :
+***********
+  - Affichage des règles
+  $ iptables -L -v --line-numbers
+  $ ip6tables -L -v --line-numbers

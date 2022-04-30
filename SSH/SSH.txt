@@ -2,10 +2,8 @@ SSH - Secure Shell
 ==================
 Protocole de communication sécurisé permettant l'accès à distance à notre serveur.
 
-*****************************
-
 Sécurisation :
-==============
+**************
 
 #.1 -a Modifier le port d'origine (22)
 --------------------------------------
@@ -17,6 +15,8 @@ Sécurisation :
 #.1 -b Interdire la connection ROOT
 -----------------------------------
     #PermitRootLogin no
+    - Redémarrer SSH :
+    $ service ssh restart
 
 #.2 Configurer une clé SSH
 --------------------------
@@ -41,4 +41,3 @@ Sécurisation :
     - Editer le fichier de configuration de SSH :
       $ vim /etc/ssh/sshd_config
       #PasswordAuthentication no
-    
