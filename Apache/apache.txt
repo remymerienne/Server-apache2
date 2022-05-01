@@ -5,6 +5,7 @@ Fichier de configuration :
 --------------------------
   /etc/apache2/apache2.conf
 
+
 Ports :
 -------
   /etc/apache2/ports.conf
@@ -24,19 +25,18 @@ Log des erreurs :
 
 Rechargement des services Apache :
 ----------------------------------
-  $ service apache2 reload
+  $ systemctl reload apache2
 
 ***************************************
 
 Le site par défaut se trouve dans :
-  /var/www/
+  /var/www/html
 
 Nous allons créer un lien nommé folio.fr dans '/var/www/' qui pointe vers notre stockage de site :
   $ ln -s /home/moi/www/folio /var/www/folio.fr
 
 Création de notre config site :
   $ vim /etc/apache2/sites-available/001-folio.conf
-  FAIRE LIEN VERS SAVE FICHIER !!!
 
 Activation du site :
 --------------------
@@ -54,7 +54,14 @@ Rechargement des services Apache :
 Modifier le Hosts du mac pour simuler un domaine DNS :
 ------------------------------------------------------
   sudo vi /etc/hosts
-  199.......     folio.fr  
+  199.......     folio.fr
+
+Désactiver le cache DNS de firefox :
+------------------------------------------------------
+    Dans la barre d'adresse de Firefox, inscrivez "about:config"
+    Dans la liste, cliquez sur le bouton droit puis cliquez sur "Nouvelle" -> "Nombre entier"
+    Nom de l'option : network.dnsCacheExpiration
+    Nouvelle valeur (nombre entier) : 0 (iso 60)
 
   nettoyer les caches Mac + navigateur
 

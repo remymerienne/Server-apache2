@@ -9,6 +9,9 @@
     },
     {
       "path": "../../../Dropbox/Server/regles-iptables"
+    },
+    {
+      "path": "../../../Dropbox/Server/apache2"
     }
   ],
   "settings": {
