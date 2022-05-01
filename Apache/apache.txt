@@ -43,6 +43,11 @@ Activation du site :
   ==> root@monserveur:/etc/apache2# a2ensite 001-folio
   ce qui va créer un lien dans /etc/apache2/sites-enabled
 
+Désactivation du site par défaut :
+----------------------------------
+  ==> root@monserveur:/etc/apache2# a2dissite 000-default
+  ce qui va créer un lien dans /etc/apache2/sites-enabled
+
 Tester les erreurs de configuration :
 --------------------
   ==> root@monserveur:/etc/apache2# apache2ctl configtest
