@@ -1,0 +1,10 @@
+# rsync
+-----------
+rsync -avhp /Users/moi/ -e "ssh -p 22" <user>@<ip>:"~/monApp"
+
+--dry-run => drapeau qui simule l'éxécution. Utile pour faire des tests. -n
+
+--delete => fera une réelle mise à jour en cas de suppression de fichier !!! Prudence !!!
+
+--exclude=<fichier à exclure> --exclude=<un autre fichier à exclure>
+

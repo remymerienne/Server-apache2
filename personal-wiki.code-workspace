@@ -3,6 +3,12 @@
     {
       "name": "Personal-wiki",
       "path": "./"
+    },
+    {
+      "path": "../../../Dropbox/Server/rsync-drop"
+    },
+    {
+      "path": "../../../Dropbox/Server/regles-iptables"
     }
   ],
   "settings": {

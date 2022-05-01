@@ -22,21 +22,20 @@ Installation :
 Configuration :
 ***************
 
-#.4 Fichiers de configuration
+#.4 Fichiers de configuration en 755
 -----------------------------
-  $ /etc/iptables/rules.v4
-  $ /etc/iptables/rules.v6
-
   $ /etc/init.d/firewall*
   $ /etc/init.d/firewallipv*
 
-   iptables-save > /etc/iptables/rules.v4
+  - Si modification de la configuration, lancer ./<mon fichier>
 
-755
-iptables -D INPUT 2
+    - Vérifier la mise en application avec :
+    $ iptables -L -v --line-numbers
+    $ ip6tables -L -v --line-numbers
 
-Commandes :
-***********
-  - Affichage des règles
-  $ iptables -L -v --line-numbers
-  $ ip6tables -L -v --line-numbers
+    - Supprimer des lignes si nécessaire avec :
+    $ iptables -D INPUT (ou OUPUT) <numéro de ligne>
+
+    - Sauvegarder les changements avec :
+    $ iptables-save > /etc/iptables/rules.v4
+    $ ip6tables-save > /etc/iptables/rules.v6
