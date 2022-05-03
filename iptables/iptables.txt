@@ -22,13 +22,13 @@ Installation :
 Configuration :
 ***************
 
-#.4 Fichiers de configuration en 755
+#.4 Fichiers bash de configuration en 755
 -----------------------------
-  $ /etc/init.d/firewall*
-  $ /etc/init.d/firewallipv*
+  firewall*
+  firewallipv*
 
-  - Si modification de la configuration, lancer ./<mon fichier>
-
+Si modification des règles :
+----------------------------
     - Vérifier la mise en application avec :
     $ iptables -L -v --line-numbers
     $ ip6tables -L -v --line-numbers

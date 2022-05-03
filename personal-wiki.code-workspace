@@ -8,10 +8,13 @@
       "path": "../../../Dropbox/Server/rsync-drop"
     },
     {
-      "path": "../../../Dropbox/Server/regles-iptables"
+      "path": "../../../Dropbox/Server/script"
     },
     {
       "path": "../../../Dropbox/Server/apache2"
+    },
+    {
+      "path": "../../../Dropbox/Server/save"
     }
   ],
   "settings": {

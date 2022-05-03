@@ -1,60 +1,26 @@
 # Apache2
 =========
 
-Fichier de configuration :
---------------------------
-  /etc/apache2/apache2.conf
-
-
-Ports :
--------
-  /etc/apache2/ports.conf
-
-Stockage des sites :
---------------------
-  /home/scientifik/www/
-
-Site par défaut :
------------------
-  /etc/apache2/sites-available/000-default.conf
-
-Log des erreurs :
------------------
+Log des erreurs générales :
+---------------------------
   /var/log/apache2/error.log
-  $ tail -n 30 /var/log/apache2/error.log
+  $ tail -n 30 /var/log/apache2/error.log ( et le drapeau -f pour voir en direct)
+
+Log des erreurs 'sites' :
+---------------------------
+  /home/moi/logs/error.log
+  $ tail -n 30 /home/moi/logs/error.log ( et le drapeau -f pour voir en direct)  
 
 Rechargement des services Apache :
 ----------------------------------
   $ systemctl reload apache2
-
-***************************************
-
-Le site par défaut se trouve dans :
-  /var/www/html
-
-Nous allons créer un lien nommé folio.fr dans '/var/www/' qui pointe vers notre stockage de site :
-  $ ln -s /home/moi/www/folio /var/www/folio.fr
-
-Création de notre config site :
-  $ vim /etc/apache2/sites-available/001-folio.conf
-
-Activation du site :
---------------------
-  ==> root@monserveur:/etc/apache2# a2ensite 001-folio
-  ce qui va créer un lien dans /etc/apache2/sites-enabled
-
-Désactivation du site par défaut :
-----------------------------------
-  ==> root@monserveur:/etc/apache2# a2dissite 000-default
-  ce qui va créer un lien dans /etc/apache2/sites-enabled
+  $ service apache2 restart
 
 Tester les erreurs de configuration :
 --------------------
   ==> root@monserveur:/etc/apache2# apache2ctl configtest
 
-Rechargement des services Apache :
-----------------------------------
-  $ systemctl reload apache2
+***************************************
 
 Modifier le Hosts du mac pour simuler un domaine DNS :
 ------------------------------------------------------
