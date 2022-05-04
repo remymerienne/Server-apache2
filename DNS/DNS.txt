@@ -1,0 +1,13 @@
+Modifier le Hosts du mac pour simuler un domaine DNS :
+------------------------------------------------------
+  sudo vi /etc/hosts
+  199.......     folio.fr
+
+Désactiver le cache DNS de firefox :
+------------------------------------------------------
+    Dans la barre d'adresse de Firefox, inscrivez "about:config"
+    Dans la liste, cliquez sur le bouton droit puis cliquez sur "Nouvelle" -> "Nombre entier"
+    Nom de l'option : network.dnsCacheExpiration
+    Nouvelle valeur (nombre entier) : 0 (iso 60)
+
+  nettoyer les caches Mac + navigateur
