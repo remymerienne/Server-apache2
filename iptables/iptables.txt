@@ -42,5 +42,14 @@ Si modification des règles :
 
 Consulter les logs :
 --------------------
+  $ tail -n 30 /var/log/syslog
 
-tail -n 30 /var/log/syslog
+***************************************
+
+# systemctl start iptables
+# systemctl stop iptables
+# systemctl restart iptables
+# systemctl status iptables
+
+***************************************
+***************************************

@@ -1,13 +1,34 @@
-fichier de configuration :
-/etc/postfix/main.cf 
+# fichier de configuration :
+# --------------------------
+  /etc/postfix/main.cf
 
-/etc/mailname ??? a vérifier...
+# Reconfigurer Postfix :
+# ----------------------
+  dpkg-reconfigure postfix
+
+# Voir les logs Postfix :
+# -----------------------
+  tail -n 30 -f /var/log/syslog
+  tail -n 30 -f /var/log/mail.log
+
+# Vérifier le fonctionnement :
+# ----------------------------
+  $ service postfix status
 
  echo "Mail test from sheldon server" | mail -s "sheldon sent an email" remy.merienne-dev@outlook.fr
 
-  tail -n 30 -f  /var/log/syslog
+***************************************
 
-**********************************
+# systemctl start postfix
+# systemctl stop postfix
+# systemctl restart postfix
+# systemctl status postfix
+
+***************************************
+***************************************
+
+/etc/mailname ??? a vérifier...
+
 
 telnet localhost 25
 
@@ -27,4 +48,3 @@ enter
 enter
 
 quit
-

@@ -8,16 +8,20 @@ Log des erreurs générales :
 
 Log des erreurs 'sites' :
 ---------------------------
-  /home/moi/logs/error.log
+  $ mkdir /home/moi/logs
+  $ touch /home/moi/logs/error.log
   $ tail -n 30 /home/moi/logs/error.log ( et le drapeau -f pour voir en direct)  
 
-Rechargement des services Apache :
-----------------------------------
-  $ systemctl reload apache2
-  $ service apache2 restart
-
 Tester les erreurs de configuration :
---------------------
+-------------------------------------
   ==> root@monserveur:/etc/apache2# apache2ctl configtest
 
+***************************************
+
+# systemctl start apache2
+# systemctl stop apache2
+# systemctl restart apache2
+# systemctl status apache2
+
+***************************************
 ***************************************
