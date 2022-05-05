@@ -51,5 +51,10 @@ Consulter les logs :
 # systemctl restart iptables
 # systemctl status iptables
 
+# traceroute -T -p2277 82.123.69.72
+
 ***************************************
 ***************************************
+
+ nmap -p 587 localhost
+ telnet <ip> <port>

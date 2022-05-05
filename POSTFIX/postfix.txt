@@ -2,6 +2,8 @@
 # --------------------------
   /etc/postfix/main.cf
 
+(config vierge => /usr/share/postfix/main.cf.dist)
+
 # Reconfigurer Postfix :
 # ----------------------
   dpkg-reconfigure postfix
@@ -10,10 +12,6 @@
 # -----------------------
   tail -n 30 -f /var/log/syslog
   tail -n 30 -f /var/log/mail.log
-
-# Vérifier le fonctionnement :
-# ----------------------------
-  $ service postfix status
 
  echo "Mail test from sheldon server" | mail -s "sheldon sent an email" remy.merienne-dev@outlook.fr
 
@@ -26,11 +24,8 @@
 
 ***************************************
 ***************************************
-
-/etc/mailname ??? a vérifier...
-
-
-telnet localhost 25
+smtp_tls_wrappermode = yes
+smtp_tls_security_level = encrypt
 
 mail from:<sheldon>
 rcpt to:<remy.merienne-dev@outlook.fr
