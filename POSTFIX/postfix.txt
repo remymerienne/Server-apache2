@@ -1,0 +1,30 @@
+fichier de configuration :
+/etc/postfix/main.cf 
+
+/etc/mailname ??? a vérifier...
+
+ echo "Mail test from sheldon server" | mail -s "sheldon sent an email" remy.merienne-dev@outlook.fr
+
+  tail -n 30 -f  /var/log/syslog
+
+**********************************
+
+telnet localhost 25
+
+mail from:<sheldon>
+rcpt to:<remy.merienne-dev@outlook.fr
+data
+To: remy.merienne-dev@outlook.fr
+From: sheldon
+Subject: Hey my first email
+This is my first email on debian postfix after installing configuring it.
+It was easy.
+
+enter
+
+.
+
+enter
+
+quit
+
