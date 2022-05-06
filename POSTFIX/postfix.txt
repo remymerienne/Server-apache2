@@ -17,7 +17,7 @@ postfix, mailutils, nmap, sasl2-bin
   tail -n 30 -f /var/log/syslog
   tail -n 30 -f /var/log/mail.log
 
- echo "Mail test from sheldon server" | mail -s "sheldon sent an email" remymerienne@orange.fr
+ echo "Mail test from server" | mail -s "server sent an email" moi@orange.fr
 
 ***************************************
 
