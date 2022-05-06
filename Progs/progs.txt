@@ -1,0 +1,11 @@
+vim
+apache2
+htop
+lm-sensors
+iptables
+iptables-persistent
+sals2-bin
+curl
+postfix
+mailutils
+nmap
