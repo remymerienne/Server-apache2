@@ -1,3 +1,7 @@
+# Installer :
+# -----------
+postfix, mailutils, nmap, sasl2-bin
+
 # fichier de configuration :
 # --------------------------
   /etc/postfix/main.cf
@@ -13,7 +17,7 @@
   tail -n 30 -f /var/log/syslog
   tail -n 30 -f /var/log/mail.log
 
- echo "Mail test from sheldon server" | mail -s "sheldon sent an email" remy.merienne-dev@outlook.fr
+ echo "Mail test from sheldon server" | mail -s "sheldon sent an email" remymerienne@orange.fr
 
 ***************************************
 
@@ -23,23 +27,6 @@
 # systemctl status postfix
 
 ***************************************
-***************************************
-smtp_tls_wrappermode = yes
-smtp_tls_security_level = encrypt
 
-mail from:<sheldon>
-rcpt to:<remy.merienne-dev@outlook.fr
-data
-To: remy.merienne-dev@outlook.fr
-From: sheldon
-Subject: Hey my first email
-This is my first email on debian postfix after installing configuring it.
-It was easy.
-
-enter
-
-.
-
-enter
-
-quit
+*** Si modification de /etc/aliases/ => $ newaliases => puis redémarrer postfix
+*** Après création et/ou modification de postfix/sender_canonical et postfix/relay_password => faire un $ postmap <fichier>
