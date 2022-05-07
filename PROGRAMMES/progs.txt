@@ -9,3 +9,5 @@ curl
 postfix
 mailutils
 nmap
+
+logs dans => /var/log/apt/history.log

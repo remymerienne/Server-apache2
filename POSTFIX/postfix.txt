@@ -30,3 +30,9 @@ postfix, mailutils, nmap, sasl2-bin
 
 *** Si modification de /etc/aliases/ => $ newaliases => puis redémarrer postfix
 *** Après création et/ou modification de postfix/sender_canonical et postfix/relay_password => faire un $ postmap <fichier>
+
+***************************************
+
+# Stockage des mails :
+# --------------------
+/var/mail/sc ou root

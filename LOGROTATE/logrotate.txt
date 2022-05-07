@@ -1,0 +1,3 @@
+/etc/logrotate.cong
+
+logs => /var/log/
