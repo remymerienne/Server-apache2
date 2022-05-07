@@ -1,0 +1,2 @@
+crontab -l => liste des tâches
+crontab -e => éditer de nouvelles tâches
