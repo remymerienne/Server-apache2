@@ -1,2 +1,6 @@
 crontab -l => liste des tâches
 crontab -e => éditer de nouvelles tâches
+
+SHELL=/bin/bash 
+# m h  dom mon dow   command
+0 */2 * * * /home/moi/bin/checkip
