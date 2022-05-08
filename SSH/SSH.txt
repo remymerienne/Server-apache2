@@ -2,6 +2,8 @@ SSH - Secure Shell
 ==================
 Protocole de communication sécurisé permettant l'accès à distance à notre serveur.
 
+ssh <user>@<ip> -p 22
+
 Sécurisation :
 **************
 
