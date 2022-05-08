@@ -138,7 +138,7 @@ Lister les branches distantes :
 
 Lister toutes les branches :
 
-`$ git branch -a`
+`$ git branch -a -v`
 
 Créer une nouvelle branche :
 

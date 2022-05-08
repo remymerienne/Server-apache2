@@ -1,0 +1,38 @@
+body,
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgb(17, 56, 94);
+  background-image: url('../images/server.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+h2 {
+  color: rgb(255, 255, 255, 0.6);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 7vw;
+}
