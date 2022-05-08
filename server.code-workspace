@@ -1,11 +1,8 @@
 {
   "folders": [
     {
-      "name": "Personal-wiki",
+      "name": "Server",
       "path": "./"
-    },
-    {
-      "path": "../../../Dropbox/Server/rsync-drop"
     },
     {
       "path": "../../../Dropbox/Server/script"
@@ -20,7 +17,7 @@
   "settings": {
     "window.zoomLevel": -1,
     "liveServer.settings.port": 5510,
-    "liveServer.settings.multiRootWorkspaceName": "Personal-wiki",
+    "liveServer.settings.multiRootWorkspaceName": "Server",
     "liveServer.settings.root": "/homepage"
   }
 }
