@@ -1,7 +1,7 @@
 {
   "folders": [
     {
-      "name": "Server",
+      "name": "Server-apache2",
       "path": "./"
     },
     {
@@ -17,7 +17,7 @@
   "settings": {
     "window.zoomLevel": -1,
     "liveServer.settings.port": 5510,
-    "liveServer.settings.multiRootWorkspaceName": "Server",
+    "liveServer.settings.multiRootWorkspaceName": "Server-apache2",
     "liveServer.settings.root": "/homepage"
   }
 }
