@@ -20,6 +20,7 @@
   "settings": {
     "window.zoomLevel": -1,
     "liveServer.settings.port": 5510,
-    "liveServer.settings.multiRootWorkspaceName": "Personal-wiki"
+    "liveServer.settings.multiRootWorkspaceName": "Personal-wiki",
+    "liveServer.settings.root": "/DEFAULT-PAGE"
   }
 }
