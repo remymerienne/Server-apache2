@@ -1,7 +1,11 @@
-cp /etc/jail.conf jail.local
+cp /etc/fail2ban/jail.conf jail.local
 
 Appliquer les config dans jail.local
 
 # Vérifier les services actifs
 # ----------------------------
 $ fail2ban-client status
+
+# Logs :
+# ------
+  $ tail -f /var/log/fail2ban.log
