@@ -6,6 +6,10 @@ Log des erreurs générales :
   /var/log/apache2/error.log
   $ tail -n 30 /var/log/apache2/error.log ( et le drapeau -f pour voir en direct)
 
+  Logs :
+  ------
+  $ /var/log/apache2/access.log
+
 Log des erreurs 'sites' :
 ---------------------------
   $ mkdir /home/moi/logs
