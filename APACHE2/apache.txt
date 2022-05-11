@@ -8,8 +8,8 @@ Log des erreurs générales :
 
   Logs :
   ------
-  $ /var/log/apache2/access.log
-  $ /var/log/syslog.log
+  $ /var/log/apache2/access.log *** *** 
+  $ /var/log/syslog
 
 Log des erreurs 'sites' :
 ---------------------------

@@ -3,4 +3,5 @@ crontab -e => éditer de nouvelles tâches
 
 SHELL=/bin/bash 
 # m h  dom mon dow   command
-0 */2 * * * /home/moi/bin/checkip
+0 */6 * * * /home/scientifik/bin/checkip
+0 */4 * * * /home/scientifik/bin/checktemp
